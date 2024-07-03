@@ -1,0 +1,104 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* 20px gap between the two parts */
+    width: 540px;
+}
+
+.execution_part {
+    background-color: #252D44;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.calculation {
+    width: 100%;
+    height: 142.73px;
+    padding: 10px;
+    font-size: 50px;
+    text-align: right;
+    background-color: #181F32;
+    color: white;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.value_part {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #252D44;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 20px;
+    font-size: 1.5em;
+    border: none;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #252D44;
+    transition: all 0.3s ease; /* Transition for button size change */
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+.del, .reset {
+    background-color: #647299;
+    color: white;
+}
+
+button:active {
+    background-color: #bbb;
+}
+
+.reset {
+    flex: 2; /* Span 2 columns */
+}
+
+.equals {
+    flex: 2; /* Span all columns in the last row */
+    background-color: #D13F30;
+    color: #FFFFFF;
+}
+
+.equals:hover{
+    background-color: #800000;
+}
+
+.row.adjusted button, .row.adjusted .placeholder {
+    flex: 1; /* Each button takes up equal space */
+}
+
+.placeholder {
+    display: none; /* Hide the placeholder by default */
+    flex: 1; /* Placeholder takes up space */
+}
+
+.row.adjusted .placeholder {
+    display: block; /* Show the placeholder when the row is adjusted */
+    flex: 1.5; /* Placeholder takes up space */
+}
