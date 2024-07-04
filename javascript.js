@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Calculate the result
                 try {
                     display.value = eval(display.value);
+                    display.style.background = 'black';
                 } catch {
                     display.value = 'Error';
                 }
